@@ -1,0 +1,22 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+	@if (this.Context.Session.GetString("user") != null)
+	{
+		<h1 class="display-4">Welcome  @this.Context.Session.GetString("user") </h1>
+
+		<a asp-action="Index" asp-controller="Profil">Profiline Git</a>
+
+
+		<a asp-action="LogOut" asp-controller="Account">Çıkış Yap</a>
+	}
+	else
+	{
+		<a asp-action="Index" asp-controller="Account">Oturum Aç</a>
+	}
+
+	<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

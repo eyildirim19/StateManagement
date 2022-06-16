@@ -1,0 +1,11 @@
+﻿@model UserVM
+
+<form method="post">
+	<input asp-for="UserName" placeholder="Kullanıcı Adınız" />
+	<br />
+	<input asp-for="Password" placeholder="Şifreniz" />
+	<br />
+	Beni Hatırla <input asp-for="RememberMe" />
+	<br />
+	<input type="submit" value="Giriş Yap" />
+</form>
